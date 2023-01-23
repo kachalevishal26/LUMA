@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="LumaSuite" thread-count="2" parallel="tests">
+	<parameter name="browser" value="chrome"/>
+	
+	<listeners>
+		<listener class-name="Analyzer.MyTransformer"/>
+		<listener class-name="com.luma.testutil.ProjListener"/>
+	</listeners>
+	
+	<test name="RegisterTest" enabled="false">
+		<classes>
+			<class name="com.luma.testcases.RegisterPageTest">
+				<methods>
+					<include name="navTest"/>
+					<include name="fillDetailsTest"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="LoginTest" enabled="true">
+		<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="com.luma.testcases.LoginPageTest">
+				<methods>
+					<include name="navTest"/>
+					<include name="loginTest"/>
+					<include name="verifyLoginTest"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="ProductTest" enabled="false">
+		<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="com.luma.testcases.HomePageTest">
+				<methods>
+<!--					<include name="homePageTest"/>-->
+					<include name="listPageTest"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
