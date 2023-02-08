@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import com.luma.base.TestBase;
 import com.luma.pages.RegisterPage;
+import com.luma.testdata.DataSupplier;
 import com.luma.testutil.TestUtil;
 
 public class RegisterPageTest extends TestBase {
@@ -34,10 +35,10 @@ public class RegisterPageTest extends TestBase {
 		registerPage.navToRegister();
 		logger.info("navigate to register page");
 	}
-	
+
 	@DataProvider
 	public Object[][] excelData() {
-		Object data[][] = TestUtil.getData("register");
+		Object data[][] = DataSupplier.getData("register");
 		return data;
 	}
 

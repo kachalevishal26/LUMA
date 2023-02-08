@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import com.luma.base.TestBase;
 import com.luma.pages.LoginPage;
+import com.luma.testdata.DataSupplier;
 import com.luma.testutil.TestUtil;
 
 public class LoginPageTest extends TestBase {
@@ -35,7 +36,7 @@ public class LoginPageTest extends TestBase {
 
 	@DataProvider
 	public Object[][] excelData() {
-		Object data[][] = TestUtil.getData("login");
+		Object data[][] = DataSupplier.getData("login");
 		return data;
 	}
 	
