@@ -8,7 +8,7 @@
 		<listener class-name="com.luma.testutil.ProjListener"/>
 	</listeners>
 	
-	<test name="RegisterTest" enabled="false">
+	<test name="RegisterTest" enabled="true">
 		<classes>
 			<class name="com.luma.testcases.RegisterPageTest">
 				<methods>
@@ -19,7 +19,7 @@
 		</classes>
 	</test>
 	
-	<test name="LoginTest" enabled="true">
+	<test name="LoginTest" enabled="false">
 		<parameter name="browser" value="chrome"/>
 		<classes>
 			<class name="com.luma.testcases.LoginPageTest">

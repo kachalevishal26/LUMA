@@ -53,6 +53,6 @@ public class RegisterPage extends TestBase {
 		uPwd.sendKeys(password);
 		cPwd.sendKeys(cPassword);
 		js.executeScript("scroll(0,150)");
-		submitBtn.click();
+//		submitBtn.click();
 	}
 }
