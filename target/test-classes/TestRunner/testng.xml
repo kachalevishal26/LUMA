@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="LumaSuite" thread-count="2" parallel="tests">
+<suite name="LumaSuite" thread-count="1" parallel="tests">
 	<parameter name="browser" value="chrome"/>
 	
 	<listeners>
@@ -8,7 +8,7 @@
 		<listener class-name="com.luma.testutil.ProjListener"/>
 	</listeners>
 	
-	<test name="RegisterTest" enabled="true">
+	<test name="RegisterTest" enabled="false">
 		<classes>
 			<class name="com.luma.testcases.RegisterPageTest">
 				<methods>
@@ -20,7 +20,6 @@
 	</test>
 	
 	<test name="LoginTest" enabled="false">
-		<parameter name="browser" value="chrome"/>
 		<classes>
 			<class name="com.luma.testcases.LoginPageTest">
 				<methods>
@@ -32,13 +31,14 @@
 		</classes>
 	</test>
 	
-	<test name="ProductTest" enabled="false">
-		<parameter name="browser" value="chrome"/>
+	<test name="ProductTest" enabled="true">
 		<classes>
 			<class name="com.luma.testcases.HomePageTest">
 				<methods>
-<!--					<include name="homePageTest"/>-->
-					<include name="listPageTest"/>
+					<include name="homePageTest"/>
+					<include name="selectProduct"/>
+					<include name="prodFilter"/>
+					<include name="selProd"/>
 				</methods>
 			</class>
 		</classes>

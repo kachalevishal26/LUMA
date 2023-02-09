@@ -5,10 +5,12 @@
     <classes>
       <class name="com.luma.testcases.HomePageTest">
         <methods>
+          <include name="selectProduct"/>
           <include name="setup"/>
           <include name="homePageTest"/>
-          <include name="listPageTest"/>
           <include name="tearDown"/>
+          <include name="prodFilter"/>
+          <include name="selProd"/>
         </methods>
       </class> <!-- com.luma.testcases.HomePageTest -->
     </classes>

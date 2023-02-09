@@ -20,6 +20,7 @@ import com.luma.base.TestBase;
 public class HomePage extends TestBase {
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	JavascriptExecutor js = (JavascriptExecutor) driver;
+	Actions actions = new Actions(driver);
 	private static final Logger logger = LogManager.getLogger(HomePage.class);
 
 	// PageFactory
@@ -45,7 +46,6 @@ public class HomePage extends TestBase {
 
 	// Actions.
 	public void homePageVerify() {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
 		if (btn1.isDisplayed()) {
 			js.executeScript("scroll(0,1680)");
 
@@ -71,7 +71,6 @@ public class HomePage extends TestBase {
 	}
 
 	public void productList() {
-		Actions action = new Actions(driver);
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -88,7 +87,7 @@ public class HomePage extends TestBase {
 
 			if (text.equals("Gear")) {
 				WebElement x = listBar.get(i);
-				action.moveToElement(x).build().perform();
+				actions.moveToElement(x).build().perform();
 			}
 
 			try {
@@ -122,15 +121,15 @@ public class HomePage extends TestBase {
 		logger.info("sort the item");
 	}
 
-	public void items() {
-		List<WebElement> listItems = driver.findElements(By.xpath("//span[@class='product-image-container']"));
-		for (int i = 0; i < listItems.size(); i++) {
-			String itemName = listItems.get(i).getText();
-
-			if (itemName.equals("Endurance Watch")) {
-//				WebElement itm = driver.findElement(By.xpath("//a[contains(text(),'+itemName+')]"));
-//				js.executeScript("arguments[0].scrollIntoView(true);", itm);
-				
+	public void prodTest() throws InterruptedException {
+		logger.info("selecting the item from PLP");
+		List<WebElement> listProd = driver.findElements(By.xpath("//strong[@class='product name product-item-name']"));
+		for (int i = 0; i < listProd.size(); i++) {
+			String txt = listProd.get(i).getText();
+			System.out.println(txt);
+			if (txt.equalsIgnoreCase("Summit Watch")) {
+				driver.findElement(By.xpath("//a[contains(text(),'" + txt + "')]")).click();
+				break;
 			}
 		}
 	}

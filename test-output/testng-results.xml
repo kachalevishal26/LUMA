@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-08T18:26:04 IST" name="LumaSuite" finished-at="2023-02-08T18:26:11 IST" duration-ms="7540">
+  <suite started-at="2023-02-09T18:59:18 IST" name="LumaSuite" finished-at="2023-02-09T18:59:54 IST" duration-ms="35492">
     <groups>
     </groups>
-    <test started-at="2023-02-08T18:26:04 IST" name="RegisterTest" finished-at="2023-02-08T18:26:11 IST" duration-ms="7540">
-      <class name="com.luma.testcases.RegisterPageTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.luma.testcases.RegisterPageTest@224b4d61]" started-at="2023-02-08T18:26:04 IST" name="setUp" finished-at="2023-02-08T18:26:09 IST" duration-ms="5145" status="PASS">
+    <test started-at="2023-02-09T18:59:18 IST" name="ProductTest" finished-at="2023-02-09T18:59:54 IST" duration-ms="35492">
+      <class name="com.luma.testcases.HomePageTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.luma.testcases.HomePageTest@1e5f4170]" started-at="2023-02-09T18:59:18 IST" name="setup" finished-at="2023-02-09T18:59:29 IST" duration-ms="10641" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -17,47 +17,28 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="navTest()[pri:0, instance:com.luma.testcases.RegisterPageTest@224b4d61]" started-at="2023-02-08T18:26:09 IST" name="navTest" finished-at="2023-02-08T18:26:10 IST" duration-ms="1101" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="homePageTest()[pri:0, instance:com.luma.testcases.HomePageTest@1e5f4170]" started-at="2023-02-09T18:59:29 IST" name="homePageTest" finished-at="2023-02-09T18:59:33 IST" duration-ms="4103" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navTest -->
-        <test-method signature="fillDetailsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.luma.testcases.RegisterPageTest@224b4d61]" started-at="2023-02-08T18:26:11 IST" name="fillDetailsTest" data-provider="excelData" finished-at="2023-02-08T18:26:11 IST" duration-ms="395" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Charlie]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Hebdo]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[charlie@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Charlie#02]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Charlie#02]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- homePageTest -->
+        <test-method signature="selectProduct()[pri:0, instance:com.luma.testcases.HomePageTest@1e5f4170]" started-at="2023-02-09T18:59:33 IST" name="selectProduct" finished-at="2023-02-09T18:59:51 IST" duration-ms="17889" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fillDetailsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.luma.testcases.RegisterPageTest@224b4d61]" started-at="2023-02-08T18:26:11 IST" name="tearDown" finished-at="2023-02-08T18:26:11 IST" duration-ms="287" status="PASS">
+        </test-method> <!-- selectProduct -->
+        <test-method signature="prodFilter()[pri:0, instance:com.luma.testcases.HomePageTest@1e5f4170]" started-at="2023-02-09T18:59:51 IST" name="prodFilter" finished-at="2023-02-09T18:59:52 IST" duration-ms="1194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prodFilter -->
+        <test-method signature="selProd()[pri:0, instance:com.luma.testcases.HomePageTest@1e5f4170]" started-at="2023-02-09T18:59:52 IST" name="selProd" finished-at="2023-02-09T18:59:53 IST" duration-ms="1298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selProd -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.luma.testcases.HomePageTest@1e5f4170]" started-at="2023-02-09T18:59:53 IST" name="tearDown" finished-at="2023-02-09T18:59:54 IST" duration-ms="325" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.luma.testcases.RegisterPageTest -->
-    </test> <!-- RegisterTest -->
+      </class> <!-- com.luma.testcases.HomePageTest -->
+    </test> <!-- ProductTest -->
   </suite> <!-- LumaSuite -->
 </testng-results>
